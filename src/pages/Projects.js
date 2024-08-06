@@ -1,4 +1,3 @@
-// src/pages/Projects.js
 import React from 'react';
 import ImageComponent from '../components/ImageComponent';
 import './Projects.css'; // Archivo CSS para estilos específicos de la página de proyectos
@@ -7,7 +6,7 @@ const projects = [
   {
     id: 1,
     title: 'Proyecto Medbot',
-    description: 'Medbot es un simulador clínico de IA para la industria de salud que ayuda a los profesionales y estudiantes a mejorar su desempeño.',
+    description: 'Medbot es un simulador clínico de IA para la industria de salud que ayuda a los profesionales y estudiantes a mejorar su desempeño garantizando su crecimiento profesional.',
     imgSrc: '/images/medbot.jpg'
   },
   {
@@ -33,6 +32,13 @@ const projects = [
     title: 'Proyecto Geobalance',
     description: 'En nuestra plataforma, ofrecemos soluciones de compensación de huella de carbono tanto para empresas comprometidas con la responsabilidad ambiental como para individuos conscientes del medio ambiente.',
     imgSrc: '/images/geobalance.jpg'
+  },
+  // Agrega el nuevo proyecto aquí
+  {
+    id: 6,
+    title: 'Proyecto MDCX',
+    description: 'MDCx: el primer token de salud que utiliza datos de la industria como activo, lo que otorga valor a la moneda Este token puede ser utilizado como un instrumento de recompensa.',
+    imgSrc: '/images/mdcx.jpg' // Asegúrate de que la imagen esté en la carpeta correcta
   }
 ];
 
@@ -58,4 +64,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
 
