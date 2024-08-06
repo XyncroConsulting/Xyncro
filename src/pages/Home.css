@@ -1,0 +1,84 @@
+/* src/pages/Home.css */
+
+/* General */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0 15px; /* Agrega relleno a los lados del contenedor */
+  }
+  
+  /* Hero Section */
+  .jumbotron {
+    background: linear-gradient(90deg, #005599, #003366);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Para garantizar que el jumbotron no toque los bordes del contenedor */
+  .jumbotron {
+    margin: 0 -15px; /* Compensa el relleno del contenedor */
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hero Section Title */
+  .jumbotron .display-4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .jumbotron .lead {
+    font-size: 1.2rem;
+  }
+  
+  /* Project Highlights Section */
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+  
+  /* Ajuste en el padding para las tarjetas de proyecto */
+  .project-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1;
+    min-width: 280px;
+    max-width: 30%;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 180px; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen se comporte correctamente */
+  }
+  
+  .project-info {
+    padding: 1rem;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #555;
+  }
+  
