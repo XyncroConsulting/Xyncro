@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'; // Archivo CSS para estilos personalizados
+import logo from './Logo.png'; // Asegúrate de que la ruta sea correcta
 
 const Header = () => {
   return (
@@ -8,13 +9,13 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            <span className="logo-text">Xyncro</span>
+            <img src={logo} alt="Xyncro Logo" className="logo-image" />
           </Link>
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse" // Cambiado a data-bs-toggle para Bootstrap 5
-            data-bs-target="#navbarNav"
+            data-toggle="collapse"
+            data-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -47,11 +48,6 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
 
 
 

@@ -7,6 +7,12 @@
     padding: 0 15px; /* Agrega relleno a los lados del contenedor */
   }
   
+  /* Contenedor de secciones */
+  .section-container {
+    padding: 0 15px; /* Agrega margen a los lados de las secciones */
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+  }
+  
   /* Hero Section */
   .jumbotron {
     background: linear-gradient(90deg, #005599, #003366);
@@ -14,14 +20,13 @@
     padding: 3rem 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Asegura que no haya márgenes externos */
   }
   
-  /* Para garantizar que el jumbotron no toque los bordes del contenedor */
-  .jumbotron {
-    margin: 0 -15px; /* Compensa el relleno del contenedor */
-    padding: 3rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Ajuste en el padding para que el jumbotron no toque los bordes del contenedor */
+  .jumbotron-container {
+    padding: 0 15px; /* Asegura espacio alrededor del jumbotron */
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
   }
   
   /* Hero Section Title */
