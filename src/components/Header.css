@@ -24,7 +24,7 @@
 .navbar-brand .logo-text {
   font-family: 'Poppins', sans-serif;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 900;
   color: white;
 }
 
@@ -34,7 +34,7 @@
 
 .navbar-nav .nav-link {
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700; /* Cambiado a 700 para hacer el texto más grueso */
 }
 
