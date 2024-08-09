@@ -86,10 +86,4 @@
     font-size: 1rem;
     color: #555;
   }
-  .section-title {
-    text-align: center;
-  }
-  .section-container h2 {
-    text-align: center;
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-  }
+

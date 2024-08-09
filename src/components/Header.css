@@ -2,67 +2,85 @@
 .header {
   background: url('header2.jpg') no-repeat center center;
   background-size: cover;
-  padding: 2rem 0; /* Aumenta el padding para hacer el header más alto */
-  height: 200px; /* Ajusta la altura según sea necesario */
+  padding: 1.5rem 2rem; /* Ajusta el padding para hacer el header más alto */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex; /* Usa flexbox para centrar el contenido */
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Alinea el logo a la izquierda y el menú a la derecha */
+  position: relative; /* Asegura que el header no se superponga al contenido */
+  z-index: 1000; /* Asegura que el header esté por encima del contenido */
 }
 
 .navbar {
-  background: transparent;
+  background: transparent; /* Fondo transparente para el menú en vista de escritorio */
   display: flex;
-  justify-content: center; /* Centra el menú horizontalmente */
+  justify-content: flex-end; /* Alinea el menú a la derecha */
   width: 100%; /* Asegura que el menú ocupa todo el ancho del header */
 }
 
 .navbar-brand {
+  display: flex;
+  align-items: center; /* Centra verticalmente el logo */
   margin-right: auto; /* Alinea el logo a la izquierda */
 }
 
-.navbar-brand .logo-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 900;
-  color: white;
+.logo-image {
+  width: 300px; /* Ajusta el tamaño según sea necesario */
+  height: auto;
+}
+
+.navbar-toggler {
+  border: none;
+  margin-left: auto; /* Alinea el botón del menú a la derecha */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-direction: row; /* Alinea los elementos del menú en fila en vista de escritorio */
 }
 
 .navbar-nav {
-  margin-left: auto; /* Alinea el menú a la derecha */
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos del menú */
 }
 
 .navbar-nav .nav-link {
   color: white;
   font-size: 1.5rem;
-  font-weight: 700; /* Cambiado a 700 para hacer el texto más grueso */
+  font-weight: 700;
+  margin-left: 1rem; /* Espacio entre los elementos del menú */
 }
 
 .navbar-nav .nav-link:hover {
   color: #f8f9fa; /* Slightly lighter color for hover effect */
 }
 
-/* Navbar toggler (for mobile view) */
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-.logo-image {
-  width: 300px; /* Ajusta el tamaño según sea necesario */
-  height: auto;
-}
-.collapse.show {
-  display: block !important;
-}
-
-@media (max-width: 992px) {
-  .navbar-nav {
+/* Estilos para el menú desplegado en dispositivos móviles */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute; /* Posiciona el menú desplegado encima del contenido */
+    top: 100%; /* Coloca el menú debajo del header */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9); /* Fondo oscuro para el menú desplegado */
+    display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem 0; /* Añade padding para que el menú tenga espacio */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Añade sombra para destacar el menú */
+  }
+
+  .navbar-nav {
     width: 100%;
+    flex-direction: column; /* Alinea los elementos del menú en columna en vista móvil */
+    text-align: center; /* Centra los elementos del menú en vista móvil */
+  }
+
+  .navbar-nav .nav-item {
+    padding: 0.5rem 0; /* Espacio alrededor de los elementos del menú */
   }
 }
-
