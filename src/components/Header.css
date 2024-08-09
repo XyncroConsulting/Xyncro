@@ -15,8 +15,6 @@
   display: flex;
   justify-content: center; /* Centra el menú horizontalmente */
   width: 100%; /* Asegura que el menú ocupa todo el ancho del header */
-  z-index: 10; /* Asegura que el menú quede sobre el contenido */
-  position: relative; /* Evita que el contenido se superponga */
 }
 
 .navbar-brand {
@@ -37,20 +35,14 @@
 .navbar-nav .nav-link {
   color: white;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 700; /* Cambiado a 700 para hacer el texto más grueso */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #f8f9fa; /* Color ligeramente más claro para el efecto hover */
+  color: #f8f9fa; /* Slightly lighter color for hover effect */
 }
 
-.collapse.show {
-  position: absolute;
-  top: 100%; /* Desplaza el menú hacia abajo */
-  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el menú desplegable */
-  width: 100%;
-}
-
+/* Navbar toggler (for mobile view) */
 .navbar-toggler {
   border: none;
 }
@@ -58,8 +50,19 @@
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-
 .logo-image {
   width: 300px; /* Ajusta el tamaño según sea necesario */
   height: auto;
 }
+.collapse.show {
+  display: block !important;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
