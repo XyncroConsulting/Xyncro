@@ -54,3 +54,15 @@
   width: 300px; /* Ajusta el tamaño según sea necesario */
   height: auto;
 }
+.collapse.show {
+  display: block !important;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
