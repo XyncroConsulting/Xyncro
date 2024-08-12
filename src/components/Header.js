@@ -1,9 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css'; // Archivo CSS para estilos personalizados
-import logo from './Logo.png'; // Asegúrate de que la ruta sea correcta
+import './Header.css';
+import logo from './Logo.png';
 
 const Header = () => {
+  const handleNavLinkClick = () => {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    // Si el menú está abierto, cierra el menú al hacer clic en una opción
+    if (navbarToggler && navbarCollapse.classList.contains('show')) {
+      navbarCollapse.classList.remove('show');
+    }
+  };
+
   return (
     <header className="header">
       <nav className="navbar navbar-expand-lg">
@@ -23,21 +33,31 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav mx-auto">
+            <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/" onClick={handleNavLinkClick}>
+                  Home
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/services">Servicios</Link>
+                <Link className="nav-link" to="/services" onClick={handleNavLinkClick}>
+                  Servicios
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">Proyectos</Link>
+                <Link className="nav-link" to="/projects" onClick={handleNavLinkClick}>
+                  Proyectos
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">Sobre Nosotros</Link>
+                <Link className="nav-link" to="/about" onClick={handleNavLinkClick}>
+                  Sobre Nosotros
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">Contacto</Link>
+                <Link className="nav-link" to="/contact" onClick={handleNavLinkClick}>
+                  Contacto
+                </Link>
               </li>
             </ul>
           </div>
@@ -48,6 +68,7 @@ const Header = () => {
 };
 
 export default Header;
+
 
 
 
